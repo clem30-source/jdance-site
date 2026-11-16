@@ -2,7 +2,7 @@
 :root {
   --bg: #0d0d0d; --bg2: #141414; --bg3: #1c1c1c;
   --text: #f4f2ee; --sub: #c9c6c0; --mute: #9a9892; --line: #2a2a2a;
-  --accent: #ff4d8d; --max: 1200px;
+  --accent: #2ee6c5; --max: 1200px;
   --c-basic: #e3f0d3; --c-kpop: #bde6fa; --c-kids: #fff1c2; --c-kp: #fbd0dc; --c-st: #ddbdeb;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,7 +41,7 @@ h3 { font-size: 22px; font-weight: 900; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 /* hero */
-.hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 80% 0%, rgba(255,77,141,.18), transparent 50%); }
+.hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 80% 0%, rgba(46,230,197), transparent 50%); }
 .hero h1 { font-size: 54px; }
 
 /* grids & cards */
