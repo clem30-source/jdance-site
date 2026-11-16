@@ -127,3 +127,12 @@ h3 { font-size: 22px; font-weight: 900; }
   .card { flex-basis: 100%; max-width: none; }
   .big-cta { font-size: 20px; }
 }
+
+/* space photos */
+.space { display: flex; flex-wrap: wrap; gap: 16px; }
+.space .sp { flex: 1 1 340px; max-width: 580px; background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.space .sp img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.space .sp figcaption { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+.space .sp h4 { font-size: 19px; font-weight: 900; }
+.space .sp p { color: var(--sub); font-size: 15px; }
+@media (max-width: 768px) { .space .sp { flex-basis: 100%; max-width: none; } }
