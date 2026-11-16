@@ -41,7 +41,7 @@ h3 { font-size: 22px; font-weight: 900; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 /* hero */
-.hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 80% 0%, rgba(46,230,197), transparent 50%); }
+.hero { padding: 96px 0 80px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 80% 0%, rgba(46,230,197,.18), transparent 50%); }
 .hero h1 { font-size: 54px; }
 
 /* grids & cards */
@@ -136,3 +136,6 @@ h3 { font-size: 22px; font-weight: 900; }
 .space .sp h4 { font-size: 19px; font-weight: 900; }
 .space .sp p { color: var(--sub); font-size: 15px; }
 @media (max-width: 768px) { .space .sp { flex-basis: 100%; max-width: none; } }
+
+/* anchor offset for sticky header */
+#timetable, #class-list, #kids { scroll-margin-top: 80px; }

@@ -25,6 +25,7 @@ window.JD.classes = {
   ],
   "groups": [
     {
+      "id": "kids",
       "en": "KIDS",
       "title": "키즈",
       "items": [

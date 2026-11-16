@@ -57,9 +57,9 @@ function renderTimetable(el) {
 function renderClasses(el) {
   const C = D.classes;
   const levels = C.levels.map((v) => `<div class="card"><h4 style="color:var(--accent)">${esc(v.name)}</h4><p>${esc(v.desc)}</p></div>`).join('');
-  const groups = C.groups.map((g) => `<div class="sub-head"><small>${esc(g.en)}</small><h3>${esc(g.title)}</h3></div>
+  const groups = C.groups.map((g) => `<div class="sub-head"${g.id ? ` id="${esc(g.id)}"` : ''}><small>${esc(g.en)}</small><h3>${esc(g.title)}</h3></div>
     <div class="grid">${g.items.map((i) => `<div class="card"><h4>${esc(i.name)}</h4><p>${esc(i.desc)}</p>${i.target ? `<div class="meta">${nl(i.target)}</div>` : ''}<div class="lv">난이도 <b>${esc(i.level)}</b></div></div>`).join('')}</div>`).join('');
-  el.innerHTML = `<h2>난이도 안내</h2><div class="grid">${levels}</div><h2 style="margin-top:56px">클래스별 상세 안내</h2>${groups}`;
+  el.innerHTML = `<h2 id="class-list">난이도 안내</h2><div class="grid">${levels}</div><h2 style="margin-top:56px">클래스별 상세 안내</h2>${groups}`;
 }
 
 function renderTeachers(el) {
@@ -115,4 +115,10 @@ const targets = document.querySelectorAll('[data-render]');
 for (let i = 0; i < targets.length; i++) {
   const fn = RENDERERS[targets[i].getAttribute('data-render')];
   if (fn) fn(targets[i]);
+}
+
+// 렌더링 후 주소의 #앵커 위치로 다시 이동 (JS로 그려진 영역 대응)
+if (location.hash) {
+  const t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (t) requestAnimationFrame(() => t.scrollIntoView());
 }
